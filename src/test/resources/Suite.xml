@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite with all tests" verbose="1" parallel="classes" thread-count="2" >
+<listeners>
+<listener class-name="listeners.TestListeners">
+</listener>
+</listeners>
+
+    <parameter name="Report_Loc" value="Reports/"/>
+    <parameter name="Log_Loc" value="API-Reports/"/>
+    <parameter name="deepReporting" value="true"/>
+    <test name="AllTests"  >
+        <!--<groups>-->
+        <!--<run>-->
+        <!--<exclude name="Arithmetic"  />-->
+        <!--&lt;!&ndash;<include name="sumForLong"  />&ndash;&gt;-->
+        <!--</run>-->
+        <!--</groups>-->
+    <packages>
+        <package name="tests.testNG"/>
+
+    </packages>
+
+
+        <!--<classes>-->
+            <!--<class name="tests.testNG.SumLongCalculatorTest" />-->
+
+            <!--<class name="tests.testNG.SumDoubleCalculatorTest" />-->
+        <!--</classes>-->
+    </test>
+</suite>
